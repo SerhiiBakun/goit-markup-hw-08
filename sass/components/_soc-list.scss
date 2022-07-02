@@ -1,0 +1,33 @@
+.soc-list {
+	@extend %list;
+	display: flex;
+	justify-content: center;
+}
+
+.soc-list__item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.soc-list__link {
+	@extend %link;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	color: var(--icon-primary-color);
+	transition: background-color var(--time-duration) var(--time-function),
+		color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		color: var(--icon-secondary-color);
+		outline: transparent;
+	}
+}
+
+.soc-list__icon {
+	fill: currentColor;
+}

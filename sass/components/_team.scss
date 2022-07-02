@@ -1,76 +1,42 @@
-/* Team */
-
 .team {
 	background-color: #f5f4fa;
-}
 
-.team-list {
-	display: flex;
-	margin-top: calc(-1 * var(--card-set-gap));
-	margin-left: calc(-1 * var(--card-set-gap));
-}
-
-.team-card {
-	flex-basis: calc(100% / 4 - var(--card-set-gap));
-	margin-left: var(--card-set-gap);
-	margin-top: var(--card-set-gap);
-
-	background-color: var(--card-bcg-color);
-	text-align: center;
-	box-shadow: var(--card-shadow);
-	border-radius: 0px 0px 4px 4px;
-	overflow: hidden;
-}
-
-.card-content {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-.team-title {
-	margin-bottom: 10px;
-
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.19;
-	color: var(--title-text-color);
-}
-
-.team-text {
-	font-size: 16px;
-	line-height: 1.19;
-	margin-bottom: 16px;
-}
-
-.team-soc-list {
-	display: flex;
-	justify-content: center;
-}
-
-.team-soc-item:not(:last-child) {
-	margin-right: 10px;
-}
-
-.team-soc-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	color: var(--icon-primary-color);
-
-	transition: background-color var(--time-duration) var(--time-function),
-		color var(--time-duration) var(--time-function);
-
-	&:hover,
-	&:focus {
-		background-color: var(--accent-color);
-		color: var(--icon-secondary-color);
-		outline: transparent;
+	&__list {
+		@extend %list;
+		display: flex;
+		margin-top: calc(-1 * var(--card-set-gap));
+		margin-left: calc(-1 * var(--card-set-gap));
 	}
-}
 
-.team-soc-icon {
-	fill: currentColor;
+	&__item {
+		background-color: var(--card-bcg-color);
+		text-align: center;
+		box-shadow: var(--card-shadow);
+		border-radius: 0px 0px 4px 4px;
+		overflow: hidden;
+
+		flex-basis: calc(100% / 4 - var(--card-set-gap));
+		margin-left: var(--card-set-gap);
+		margin-top: var(--card-set-gap);
+	}
+
+	&__content {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__name {
+		margin-bottom: 10px;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.19;
+		color: var(--title-text-color);
+	}
+
+	&__position {
+		font-size: 16px;
+		line-height: 1.19;
+		margin-bottom: 16px;
+	}
 }

@@ -1,40 +1,39 @@
-/* Benefits */
-
 .benefits {
-	.list {
+	&__list {
+		@extend %list;
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: calc(-1 * var(--card-set-gap));
 		margin-left: calc(-1 * var(--card-set-gap));
 	}
-}
 
-.benefits-item {
-	flex-basis: calc(100% / 4 - var(--card-set-gap));
-	margin-left: var(--card-set-gap);
-	margin-top: var(--card-set-gap);
-}
+	&__item {
+		flex-basis: calc(100% / 4 - var(--card-set-gap));
+		margin-left: var(--card-set-gap);
+		margin-top: var(--card-set-gap);
+	}
 
-.benefits-decor {
-	display: flex;
-	background: #f5f4fa;
-	border-radius: 4px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	margin-bottom: 30px;
-	justify-content: center;
-}
+	&__decor {
+		display: flex;
+		background: #f5f4fa;
+		border-radius: 4px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		margin-bottom: 30px;
+		justify-content: center;
+	}
 
-.benefits-title {
-	margin-bottom: 10px;
+	&__title {
+		margin-bottom: 10px;
 
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	text-transform: uppercase;
-	color: var(--title-text-color);
-}
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-transform: uppercase;
+		color: var(--title-text-color);
+	}
 
-.benefits-text {
-	line-height: 1.71;
+	&__text {
+		line-height: 1.71;
+	}
 }

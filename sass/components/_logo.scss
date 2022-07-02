@@ -15,3 +15,11 @@
 		color: var(--title-text-color);
 	}
 }
+
+.footer__logo {
+	margin-bottom: 20px;
+	width: 100%;
+	&--accent {
+		color: var(--text-color-light);
+	}
+}

@@ -1,8 +1,8 @@
-.footer-joinus {
+.footer__joinus {
 	margin-right: 93px;
 }
 
-.joinus-title {
+.joinus__title {
 	margin-bottom: 20px;
 
 	font-size: inherit;
@@ -11,16 +11,18 @@
 	color: var(--text-color-light);
 }
 
-.joinus-list {
+.joinus__list {
+	@extend %list;
 	display: flex;
 	justify-content: center;
 }
 
-.joinus-item:not(:last-child) {
+.joinus__item:not(:last-child) {
 	margin-right: 10px;
 }
 
-.joinus-link {
+.joinus__link {
+	@extend %link;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -29,7 +31,6 @@
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: var(--icon-secondary-color);
-
 	transition: background-color var(--time-duration) var(--time-function);
 
 	&:hover,
@@ -39,6 +40,6 @@
 	}
 }
 
-.joinus-icon {
+.joinus__icon {
 	fill: currentColor;
 }

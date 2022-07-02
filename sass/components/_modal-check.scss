@@ -1,0 +1,37 @@
+.modal-check {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.modal-check__title {
+	position: relative;
+	line-height: 1.71;
+	padding-left: 23px;
+	cursor: pointer;
+}
+
+.modal-check__icon {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	border: 2px solid var(--title-text-color);
+	background-color: transparent;
+	fill: transparent;
+	transition: border var(--time-duration) var(--time-function),
+		background-color var(--time-duration) var(--time-function);
+
+	.modal-check__input:checked + &,
+	.modal-check__input:checked:focus + &,
+	.modal-check__input:checked:hover + & {
+		border: none;
+		background-color: var(--accent-color);
+	}
+
+	.modal-check__input:focus + &,
+	.modal-check__input:hover + & {
+		border: 2px solid var(--accent-color);
+	}
+}

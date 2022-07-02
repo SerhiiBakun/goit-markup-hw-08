@@ -1,4 +1,4 @@
-.footer-address {
+.footer__address {
 	margin-right: 70px;
 	min-width: 231px;
 }
@@ -8,13 +8,17 @@
 	line-height: 1.71;
 }
 
-.address-item:not(:last-child) {
+.address__list {
+	@extend %list;
+}
+
+.address__item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
-.address-link {
+.address__link {
+	@extend %link;
 	color: var(--text-color-light);
-
 	transition: color var(--time-duration) var(--time-function);
 
 	&:hover,
@@ -24,12 +28,6 @@
 	}
 }
 
-.contacts-link {
+.address__link--transparent {
 	color: rgba(255, 255, 255, 0.6);
-
-	&:hover,
-	&:focus {
-		color: var(--accent-color);
-		outline: transparent;
-	}
 }

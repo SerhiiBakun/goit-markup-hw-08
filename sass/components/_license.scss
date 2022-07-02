@@ -1,0 +1,10 @@
+.license {
+	display: inline-block;
+	line-height: 1.71;
+	color: var(--accent-color);
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}

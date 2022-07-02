@@ -1,11 +1,10 @@
-/* Filter */
-
-.filter-list {
+.filter__list {
+	@extend %list;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 50px;
 }
 
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
 	margin-right: 8px;
 }
