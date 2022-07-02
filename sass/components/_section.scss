@@ -1,14 +1,13 @@
 .section {
 	padding-top: var(--section-padding-size);
 	padding-bottom: var(--section-padding-size);
-}
+	&-title {
+		margin-bottom: 50px;
 
-.section-title {
-	margin-bottom: 50px;
-
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	text-align: center;
-	color: var(--title-text-color);
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.17;
+		text-align: center;
+		color: var(--title-text-color);
+	}
 }
