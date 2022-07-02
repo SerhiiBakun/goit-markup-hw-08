@@ -1,0 +1,35 @@
+.footer-address {
+	margin-right: 70px;
+	min-width: 231px;
+}
+
+.address {
+	font-style: normal;
+	line-height: 1.71;
+}
+
+.address-item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.address-link {
+	color: var(--text-color-light);
+
+	transition: color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		outline: transparent;
+	}
+}
+
+.contacts-link {
+	color: rgba(255, 255, 255, 0.6);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		outline: transparent;
+	}
+}

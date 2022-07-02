@@ -1,5 +1,3 @@
-/* Hero */
-
 .hero {
 	background-color: #2f303a;
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.jpg);
@@ -16,7 +14,7 @@
 	padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
 	margin-bottom: 30px;
 
 	font-weight: 900;
@@ -26,16 +24,16 @@
 	text-transform: uppercase;
 	color: var(--text-color-light);
 }
-.hero .btn {
-	padding: 10px 32px;
 
+.btn__hero {
+	padding: 10px 32px;
 	font-weight: 700;
 	line-height: 1.88;
 	color: var(--text-color-light);
 	background-color: var(--accent-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-.hero .btn:hover,
-.hero .btn:focus {
-	background-color: var(--btn-hover-color);
+	&:hover,
+	&:focus {
+		background-color: var(--btn-hover-color);
+	}
 }

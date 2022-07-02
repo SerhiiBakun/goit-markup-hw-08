@@ -25,15 +25,15 @@
 	color: var(--icon-primary-color);
 
 	transition: color var(--time-duration) var(--time-function), border-color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		border: 1px solid var(--accent-color);
+		color: var(--accent-color);
+		outline: transparent;
+	}
 }
 
 .clients-icon {
 	fill: currentColor;
-}
-
-.clients-link:hover,
-.clients-link:focus {
-	border: 1px solid var(--accent-color);
-	color: var(--accent-color);
-	outline: transparent;
 }

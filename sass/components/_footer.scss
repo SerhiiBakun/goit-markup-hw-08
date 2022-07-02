@@ -1,0 +1,21 @@
+/* Footer */
+
+.footer {
+	background-color: #2f303a;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	.container {
+		display: flex;
+		align-items: baseline;
+	}
+
+	.logo {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.accent {
+		color: var(--text-color-light);
+	}
+}
