@@ -4,9 +4,7 @@
 
 .joinus__title {
 	margin-bottom: 20px;
-
-	font-size: inherit;
-	line-height: 1.14;
+	@include font(null, inherit, 1.14, null);
 	text-transform: uppercase;
 	color: var(--text-color-light);
 }

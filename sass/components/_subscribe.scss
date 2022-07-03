@@ -4,8 +4,7 @@
 
 .subscribe__title {
 	display: block;
-	font-weight: 700;
-	line-height: 1.14;
+		@include font(700, null, 1.14, null);
 	text-transform: uppercase;
 	color: var(--text-color-light);
 	margin-bottom: 20px;
@@ -25,15 +24,12 @@
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
 	padding-left: 16px;
-
-	font-size: 16px;
-	line-height: 1.25;
+	@include font(null, 16px, 1.25, null);
 	color: var(--text-color-light);
 	transition: border-color var(--time-duration) var(--time-function);
 
 	&::placeholder {
-		font-size: 16px;
-		line-height: 1.25;
+			@include font(null, 16px, 1.25, null);
 		color: rgba(255, 255, 255, 0.6);
 	}
 
@@ -51,9 +47,7 @@
 
 	padding-left: 28px;
 	padding-right: 28px;
-
-	font-weight: 700;
-	line-height: 1.88;
+	@include font(700, null, 1.88, null);
 	color: var(--text-color-light);
 	background-color: var(--accent-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

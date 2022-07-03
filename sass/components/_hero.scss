@@ -16,10 +16,7 @@
 
 .hero__title {
 	margin-bottom: 30px;
-
-	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
+	@include font(900, 44px, 1.36, null);
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--text-color-light);
@@ -27,8 +24,7 @@
 
 .btn__hero {
 	padding: 10px 32px;
-	font-weight: 700;
-	line-height: 1.88;
+	@include font(700, null, 1.88, null);
 	color: var(--text-color-light);
 	background-color: var(--accent-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

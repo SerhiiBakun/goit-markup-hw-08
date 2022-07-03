@@ -1,10 +1,8 @@
 .logo {
 	@extend %link;
 	display: block;
-	font-family: "Raleway", sans-serif;
-	font-size: 26px;
-	line-height: 1.2;
-	font-weight: 700;
+	font-family: $fontSecondary;
+	@include font(700, 26px, 1.2, null);
 	color: var(--accent-color);
 }
 

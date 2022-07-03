@@ -258,56 +258,6 @@ summary {
   display: list-item;
 }
 
-/* roboto-regular - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/roboto-v30-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-v30-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff"), url("../fonts/roboto-v30-latin-regular.ttf") format("truetype"), url("../fonts/roboto-v30-latin-regular.svg#Roboto") format("svg");
-  /* Legacy iOS */
-}
-/* roboto-500 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/roboto-v30-latin-500.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-v30-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin-500.woff") format("woff"), url("../fonts/roboto-v30-latin-500.ttf") format("truetype"), url("../fonts/roboto-v30-latin-500.svg#Roboto") format("svg");
-  /* Legacy iOS */
-}
-/* roboto-700 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/roboto-v30-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-v30-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin-700.woff") format("woff"), url("../fonts/roboto-v30-latin-700.ttf") format("truetype"), url("../fonts/roboto-v30-latin-700.svg#Roboto") format("svg");
-  /* Legacy iOS */
-}
-/* roboto-900 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/roboto-v30-latin-900.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-v30-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto-v30-latin-900.woff") format("woff"), url("../fonts/roboto-v30-latin-900.ttf") format("truetype"), url("../fonts/roboto-v30-latin-900.svg#Roboto") format("svg");
-  /* Legacy iOS */
-}
-/* raleway-700 - latin */
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/raleway-v27-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/raleway-v27-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v27-latin-700.woff2") format("woff2"), url("../fonts/raleway-v27-latin-700.woff") format("woff"), url("../fonts/raleway-v27-latin-700.ttf") format("truetype"), url("../fonts/raleway-v27-latin-700.svg#Raleway") format("svg");
-  /* Legacy iOS */
-}
 h1,
 h2,
 h3,
@@ -349,6 +299,14 @@ img {
   --time-duration: 250ms;
 }
 
+.work__list, .filter__list, .joinus__list, .address__list, .clients__list, .soc-list, .team__list, .specialization__list, .benefits__list, .contact, .nav__list {
+  list-style: none;
+}
+
+.work__link, .joinus__link, .address__link, .clients__link, .soc-list__link, .contact__link, .nav__link, .logo {
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -366,8 +324,8 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: inherit;
+  text-align: center;
   color: var(--title-text-color);
   background-color: var(--btn-bcg-color);
   cursor: pointer;
@@ -378,14 +336,6 @@ body {
   background-color: var(--accent-color);
   outline: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.work__list, .filter__list, .joinus__list, .address__list, .clients__list, .soc-list, .team__list, .specialization__list, .benefits__list, .contact, .nav__list {
-  list-style: none;
-}
-
-.work__link, .joinus__link, .address__link, .clients__link, .soc-list__link, .contact__link, .nav__link, .logo {
-  text-decoration: none;
 }
 
 .container {
@@ -418,8 +368,8 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--title-text-color);
+  text-align: center;
 }
 
 .is-hidden {
@@ -442,9 +392,9 @@ body {
 .logo {
   display: block;
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  font-weight: 700;
   color: var(--accent-color);
 }
 
@@ -1080,6 +1030,13 @@ body {
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter__item--current {
+  color: var(--text-color-light);
+  background-color: var(--accent-color);
+  outline: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .work__list {

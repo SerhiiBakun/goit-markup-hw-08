@@ -6,9 +6,7 @@
 .modal-form__title {
 	display: inline-block;
 	margin-bottom: 4px;
-	font-size: 12px;
-	line-height: 1.17;
-	letter-spacing: 0.01em;
+	@include font(null, 12px, 1.17, 0.01em);
 	color: var(--primary-text-color);
 }
 
