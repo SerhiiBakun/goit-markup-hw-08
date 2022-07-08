@@ -1,2 +1,2 @@
-# goit-markup-hw-01
-HTML+CSS 2.0 Модуль 1, ДЗ №1
+# goit-markup-hw-08
+HTML+CSS 2.0 Модуль 8, ДЗ №8
