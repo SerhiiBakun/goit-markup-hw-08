@@ -2,16 +2,20 @@
 	background-color: #2f303a;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	text-align: center;
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
 
-	// .container {
-	// 	display: flex;
-	// 	align-items: baseline;
-	// }
+	@include desktop {
+		.container {
+			display: flex;
+			align-items: baseline;
+		}
+	}
 }
 
-@media screen and (min-width: $tablet) and (max-width: 1199px) {
-	.footer__tablet {
+.footer__contacts {
+	@include tablet {
 		display: flex;
 		align-items: baseline;
 		justify-content: space-around;

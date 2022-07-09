@@ -5,9 +5,14 @@
 		flex-wrap: wrap;
 		margin-bottom: 19px;
 	}
+
 	@include tablet {
 		justify-content: center;
 		margin-bottom: 36px;
+	}
+
+	@include desktop {
+		margin-bottom: 56px;
 	}
 }
 

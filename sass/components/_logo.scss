@@ -4,8 +4,9 @@
 	color: var(--accent-color);
 	@include font(700, 24px, 1.17, null);
 	display: block;
-
-	// @include font(700, 26px, 1.2, null);
+	@include desktop {
+		@include font(700, 26px, 1.2, null);
+	}
 }
 
 .header__logo {
@@ -15,10 +16,26 @@
 
 	&--accent {
 		color: var(--title-text-color);
+		transition: color var(--time-duration) var(--time-function);
 	}
 
 	@include tablet {
 		margin-right: 88px;
+	}
+	@include desktop {
+		margin-right: 93px;
+	}
+
+	transition: color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		color: var(--title-text-color);
+	}
+
+	&:hover &--accent,
+	&:focus &--accent {
+		color: var(--accent-color);
 	}
 }
 
@@ -27,5 +44,14 @@
 	// width: 100%;
 	&--accent {
 		color: var(--text-color-light);
+	}
+	&:hover,
+	&:focus {
+		color: var(--text-color-light);
+	}
+
+	&:hover &--accent,
+	&:focus &--accent {
+		color: var(--accent-color);
 	}
 }

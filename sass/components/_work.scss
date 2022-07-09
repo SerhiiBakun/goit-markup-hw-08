@@ -26,14 +26,21 @@
 	}
 }
 
-.work__item:not(:last-child) {
+.work__item {
 	background-color: var(--card-bcg-color);
 	@media screen and (max-width: 767px) {
-		margin-bottom: 30px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
 	}
+
 	@include tablet {
 		flex-basis: calc((100% - 4 * var(--card-set-gap)) / 2);
 		margin: var(--card-set-gap);
+	}
+
+	@include desktop {
+		flex-basis: calc((100% - 6 * var(--card-set-gap)) / 3);
 	}
 }
 

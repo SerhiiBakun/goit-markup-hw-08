@@ -1,12 +1,16 @@
 .footer__address {
-	// margin-right: 70px;
-	// min-width: 231px;
+	@include desktop {
+		margin-right: 70px;
+		min-width: 231px;
+	}
 }
 
 .address {
 	font-style: normal;
 	line-height: 1.71;
-	margin-bottom: 60px;
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
 }
 
 .address__list {
@@ -15,6 +19,9 @@
 
 .address__item:not(:last-child) {
 	margin-bottom: 8px;
+	@include desktop {
+		margin-bottom: 9px;
+	}
 }
 
 .address__link {

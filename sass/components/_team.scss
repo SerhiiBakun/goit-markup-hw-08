@@ -26,6 +26,9 @@
 			flex-basis: calc((100% - 4 * var(--card-set-gap)) / 2);
 			margin: var(--card-set-gap);
 		}
+		@include desktop {
+			flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
+		}
 	}
 
 	&__content {

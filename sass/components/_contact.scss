@@ -4,12 +4,18 @@
 	}
 	@extend %list;
 	margin-left: auto;
-	// display: flex;
+	@include desktop {
+		display: flex;
+	}
 }
 
 .contact__item:not(:last-child) {
-	margin-bottom: 10px;
-	// margin-right: 50px;
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 10px;
+	}
+	@include desktop {
+		margin-right: 50px;
+	}
 }
 
 .contact__link {
@@ -25,9 +31,10 @@
 		color: var(--accent-color);
 		outline: transparent;
 	}
-	// padding-top: 32px;
-	// padding-bottom: 32px;
-	// justify-content: center;
+	@include desktop {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
 }
 
 .contact__icon {

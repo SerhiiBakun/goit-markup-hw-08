@@ -1,6 +1,10 @@
 .footer__joinus {
-	// margin-right: 93px;
-	margin-bottom: 60px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+	@include desktop {
+		margin-right: 93px;
+	}
 }
 
 .joinus__title {
