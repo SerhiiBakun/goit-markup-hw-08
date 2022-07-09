@@ -15,15 +15,10 @@
 	height: 100vh;
 	background-color: var(--primary-bcg-color);
 	overflow: auto;
-	.container {
-		position: relative;
-		display: flex;
-		height: 100%;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 48px 40px;
-		// overflow: auto;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 48px 40px;
 }
 
 .mob-menu__close {
