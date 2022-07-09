@@ -21,6 +21,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 48px 40px;
+		overflow: auto;
 	}
 }
 
@@ -48,6 +49,12 @@
 .menu-nav__link {
 	@extend %link;
 	color: var(--title-text-color);
+	transition: color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 
 	&--current {
 		color: var(--accent-color);

@@ -531,6 +531,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
+  overflow: auto;
 }
 
 .mob-menu__close {
@@ -555,6 +556,10 @@ body {
 
 .menu-nav__link {
   color: var(--title-text-color);
+  transition: color var(--time-duration) var(--time-function);
+}
+.menu-nav__link:hover, .menu-nav__link:focus {
+  color: var(--accent-color);
 }
 .menu-nav__link--current {
   color: var(--accent-color);
