@@ -6,7 +6,7 @@
 
 .modal-check__title {
 	position: relative;
-	line-height: 1.71;
+	@include font(null, 12px, 1.17, null);
 	padding-left: 23px;
 	cursor: pointer;
 }

@@ -1,5 +1,10 @@
 .mob-menu__open {
 	margin-left: auto;
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 }
 
 .menu-open__icon {
@@ -27,6 +32,11 @@
 	right: 15px;
 	width: 40px;
 	height: 40px;
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
 }
 
 .menu-close__icon {
