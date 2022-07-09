@@ -294,7 +294,7 @@ img {
   --icon-primary-color: #afb1b8;
   --icon-secondary-color: #ffffff;
   --section-padding-size: 94px;
-  --card-set-gap: 30px;
+  --card-set-gap: 15px;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
   --time-duration: 250ms;
@@ -346,11 +346,25 @@ body {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -392,21 +406,26 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
+
 .header__nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  display: block;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: var(--accent-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  display: block;
 }
 
 .header__logo {
-  margin-right: 93px;
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .header__logo--accent {
   color: var(--title-text-color);
@@ -427,6 +446,11 @@ body {
 
 .nav__list {
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -469,6 +493,11 @@ body {
   display: flex;
   margin-left: auto;
 }
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
 
 .contact__item:not(:last-child) {
   margin-right: 50px;
@@ -495,27 +524,44 @@ body {
   fill: currentColor;
 }
 
+.menu-open__btn {
+  display: inline-block;
+  margin-left: auto;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  color: var(--title-text-color);
+  transition: color var(--time-duration) var(--time-function);
+}
+.menu-open__btn:hover, .menu-open__btn:focus {
+  color: var(--accent-color);
+}
+
+.menu-open__icon {
+  fill: currentColor;
+}
+
 .hero {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herobg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0.06em;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 
 .hero__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.62;
   text-transform: uppercase;
   color: var(--text-color-light);
 }
@@ -535,13 +581,11 @@ body {
 .benefits__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  margin: calc(-1 * var(--card-set-gap));
 }
 .benefits__item {
-  flex-basis: calc(25% - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
+  margin: var(--card-set-gap);
 }
 .benefits__decor {
   display: flex;
@@ -569,14 +613,12 @@ body {
 }
 .specialization__list {
   display: flex;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  margin: calc(-1 * var(--card-set-gap));
 }
 .specialization__item {
   position: relative;
-  flex-basis: calc(33.3333333333% - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: calc((100% - 6 * var(--card-set-gap)) / 3);
+  margin: var(--card-set-gap);
 }
 .specialization__text {
   position: absolute;
@@ -600,8 +642,7 @@ body {
 }
 .team__list {
   display: flex;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  margin: calc(-1 * var(--card-set-gap));
 }
 .team__item {
   background-color: var(--card-bcg-color);
@@ -609,9 +650,8 @@ body {
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-  flex-basis: calc(25% - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
+  margin: var(--card-set-gap);
 }
 .team__content {
   padding-top: 30px;
@@ -662,14 +702,12 @@ body {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  margin: calc(-1 * var(--card-set-gap));
 }
 
 .clients__item {
-  flex-basis: calc(16.6666666667% - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: calc((100% - 12 * var(--card-set-gap)) / 6);
+  margin: var(--card-set-gap);
 }
 
 .clients__link {
@@ -844,28 +882,29 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
   overflow: hidden;
-  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--time-duration) var(--time-function);
+  overflow-y: auto;
 }
 .backdrop.is-hidden {
   opacity: 0;
 }
 
 .modal {
-  position: absolute;
-  width: 528px;
-  min-height: 581px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  position: relative;
+  max-width: 450px;
+  min-height: 609px;
   padding: 40px;
   transition: transform var(--time-duration) var(--time-function);
   background: var(--primary-bcg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  overflow-y: auto;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
@@ -1042,8 +1081,7 @@ body {
 .work__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  margin: calc(-1 * var(--card-set-gap));
 }
 
 .work__content {
@@ -1064,9 +1102,8 @@ body {
 
 .work__item {
   background-color: var(--card-bcg-color);
-  flex-basis: calc(33.3333333333% - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+  flex-basis: calc((100% - 6 * var(--card-set-gap)) / 3);
+  margin: var(--card-set-gap);
 }
 
 .work__card {

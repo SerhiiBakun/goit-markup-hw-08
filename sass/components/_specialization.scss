@@ -4,15 +4,13 @@
 	&__list {
 		@extend %list;
 		display: flex;
-		margin-top: calc(-1 * var(--card-set-gap));
-		margin-left: calc(-1 * var(--card-set-gap));
+		margin: calc(-1 * var(--card-set-gap));
 	}
 
 	&__item {
 		position: relative;
-		flex-basis: calc(100% / 3 - var(--card-set-gap));
-		margin-left: var(--card-set-gap);
-		margin-top: var(--card-set-gap);
+		flex-basis: calc((100% - 6 * var(--card-set-gap)) / 3);
+		margin: var(--card-set-gap);
 	}
 
 	&__text {

@@ -5,11 +5,14 @@
 	top: 0;
 	left: 0;
 	z-index: 1;
+	padding-top: 93px;
+	padding-left: 15px;
+	padding-right: 15px;
 	overflow: hidden;
-	overflow-y: auto;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
 	transition: opacity var(--time-duration) var(--time-function);
+	overflow-y: auto;
 
 	&.is-hidden {
 		opacity: 0;

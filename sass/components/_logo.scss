@@ -1,13 +1,17 @@
 .logo {
 	@extend %link;
-	display: block;
 	font-family: $fontSecondary;
-	@include font(700, 26px, 1.2, null);
 	color: var(--accent-color);
+	@include font(700, 24px, 1.17, null);
+	display: block;
+	// @include font(700, 26px, 1.2, null);
 }
 
 .header__logo {
-	margin-right: 93px;
+	// margin-right: 93px;
+	margin-right: auto;
+	padding-top: 16px;
+	padding-bottom: 16px;
 
 	&--accent {
 		color: var(--title-text-color);

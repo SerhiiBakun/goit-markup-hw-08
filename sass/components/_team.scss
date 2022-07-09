@@ -4,8 +4,7 @@
 	&__list {
 		@extend %list;
 		display: flex;
-		margin-top: calc(-1 * var(--card-set-gap));
-		margin-left: calc(-1 * var(--card-set-gap));
+		margin: calc(-1 * var(--card-set-gap));
 	}
 
 	&__item {
@@ -15,9 +14,8 @@
 		border-radius: 0px 0px 4px 4px;
 		overflow: hidden;
 
-		flex-basis: calc(100% / 4 - var(--card-set-gap));
-		margin-left: var(--card-set-gap);
-		margin-top: var(--card-set-gap);
+		flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
+		margin: var(--card-set-gap);
 	}
 
 	&__content {
@@ -27,12 +25,12 @@
 
 	&__name {
 		margin-bottom: 10px;
-	@include font(500, 16px, 1.19, null);
+		@include font(500, 16px, 1.19, null);
 		color: var(--title-text-color);
 	}
 
 	&__position {
-			@include font(null, 16px, 1.19, null);
+		@include font(null, 16px, 1.19, null);
 		margin-bottom: 16px;
 	}
 }

@@ -1,0 +1,19 @@
+.menu-open__btn {
+	display: inline-block;
+	margin-left: auto;
+	background-color: transparent;
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	color: var(--title-text-color);
+	transition: color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.menu-open__icon {
+	fill: currentColor;
+}

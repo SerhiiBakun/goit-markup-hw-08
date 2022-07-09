@@ -3,14 +3,12 @@
 		@extend %list;
 		display: flex;
 		flex-wrap: wrap;
-		margin-top: calc(-1 * var(--card-set-gap));
-		margin-left: calc(-1 * var(--card-set-gap));
+		margin: calc(-1 * var(--card-set-gap));
 	}
 
 	&__item {
-		flex-basis: calc(100% / 4 - var(--card-set-gap));
-		margin-left: var(--card-set-gap);
-		margin-top: var(--card-set-gap);
+		flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
+		margin: var(--card-set-gap);
 	}
 
 	&__decor {
