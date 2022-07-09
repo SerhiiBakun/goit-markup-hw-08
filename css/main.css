@@ -523,6 +523,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary-bcg-color);
+  overflow: auto;
 }
 .mob-menu .container {
   position: relative;
@@ -531,7 +532,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
-  overflow: auto;
 }
 
 .mob-menu__close {
@@ -580,6 +580,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+.menu-contact__link--tel:hover, .menu-contact__link--tel:focus {
+  text-decoration: underline;
+}
 
 .menu-contact__link--mail {
   font-weight: 500;
@@ -587,6 +590,9 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+.menu-contact__link--mail:hover, .menu-contact__link--mail:focus {
+  text-decoration: underline;
 }
 
 .menu-soc {
@@ -606,6 +612,11 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  transition: color var(--time-duration) var(--time-function), background-color var(--time-duration) var(--time-function);
+}
+.menu-soc__link:hover, .menu-soc__link:focus {
+  color: var(--text-color-light);
+  background-color: var(--accent-color);
 }
 
 .hero {

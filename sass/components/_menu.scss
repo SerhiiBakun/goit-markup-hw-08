@@ -14,6 +14,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--primary-bcg-color);
+	overflow: auto;
 	.container {
 		position: relative;
 		display: flex;
@@ -21,7 +22,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 48px 40px;
-		overflow: auto;
+		// overflow: auto;
 	}
 }
 
@@ -77,11 +78,21 @@
 .menu-contact__link--tel {
 	@include font(500, 34px, 1.18, 0.02em);
 	color: var(--accent-color);
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
 }
 
 .menu-contact__link--mail {
 	@include font(500, 24px, 1.17, 0.02em);
 	color: var(--primary-text-color);
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
 }
 
 .menu-soc {
@@ -102,4 +113,12 @@
 	@extend %link;
 	@include font(500, 18px, 1.22, 0.02em);
 	color: var(--accent-color);
+	transition: color var(--time-duration) var(--time-function),
+		background-color var(--time-duration) var(--time-function);
+
+	&:hover,
+	&:focus {
+		color: var(--text-color-light);
+		background-color: var(--accent-color);
+	}
 }
