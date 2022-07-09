@@ -1,11 +1,12 @@
 .footer__address {
-	margin-right: 70px;
-	min-width: 231px;
+	// margin-right: 70px;
+	// min-width: 231px;
 }
 
 .address {
 	font-style: normal;
 	line-height: 1.71;
+	margin-bottom: 60px;
 }
 
 .address__list {
@@ -13,7 +14,7 @@
 }
 
 .address__item:not(:last-child) {
-	margin-bottom: 9px;
+	margin-bottom: 8px;
 }
 
 .address__link {
