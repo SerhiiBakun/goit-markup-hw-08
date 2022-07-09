@@ -1,8 +1,14 @@
 .filter__list {
 	@extend %list;
 	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 19px;
+	@media screen and (max-width: 767px) {
+		flex-wrap: wrap;
+		margin-bottom: 19px;
+	}
+	@include tablet {
+		justify-content: center;
+		margin-bottom: 36px;
+	}
 }
 
 .filter__item:not(:last-child) {
@@ -16,7 +22,9 @@
 	@include font(500, 16px, 1.62, inherit);
 	text-align: center;
 	background-color: var(--btn-bcg-color);
-	margin-bottom: 21px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 21px;
+	}
 
 	&:hover,
 	&:focus {

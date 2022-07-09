@@ -3,8 +3,12 @@
 
 	&__list {
 		@extend %list;
-		// display: flex;
-		// margin: calc(-1 * var(--card-set-gap));
+
+		@include tablet {
+			display: flex;
+			flex-wrap: wrap;
+			margin: calc(-1 * var(--card-set-gap));
+		}
 	}
 
 	&__item {
@@ -18,9 +22,10 @@
 				margin-bottom: 30px;
 			}
 		}
-
-		// flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
-		// margin: var(--card-set-gap);
+		@include tablet {
+			flex-basis: calc((100% - 4 * var(--card-set-gap)) / 2);
+			margin: var(--card-set-gap);
+		}
 	}
 
 	&__content {

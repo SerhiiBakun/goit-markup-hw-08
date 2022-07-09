@@ -5,6 +5,9 @@
 	&:focus {
 		color: var(--accent-color);
 	}
+	@include tablet {
+		display: none;
+	}
 }
 
 .menu-open__icon {
