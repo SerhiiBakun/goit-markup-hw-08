@@ -6,7 +6,7 @@
 }
 
 .clients__item {
-	flex-basis: calc((100% - 12 * var(--card-set-gap)) / 6);
+	flex-basis: calc((100% - 4 * var(--card-set-gap)) / 2);
 	margin: var(--card-set-gap);
 }
 

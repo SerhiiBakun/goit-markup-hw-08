@@ -293,7 +293,6 @@ img {
   --btn-hover-color: #188ce8;
   --icon-primary-color: #afb1b8;
   --icon-secondary-color: #ffffff;
-  --section-padding-size: 94px;
   --card-set-gap: 15px;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -381,14 +380,14 @@ body {
 }
 
 .section {
-  padding-top: var(--section-padding-size);
-  padding-bottom: var(--section-padding-size);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   color: var(--title-text-color);
   text-align: center;
 }
@@ -578,14 +577,10 @@ body {
   background-color: var(--btn-hover-color);
 }
 
-.benefits__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(-1 * var(--card-set-gap));
-}
-.benefits__item {
-  flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
-  margin: var(--card-set-gap);
+@media screen and (max-width: 767px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .benefits__decor {
   display: flex;
@@ -610,6 +605,11 @@ body {
 
 .specialization {
   padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .specialization {
+    display: none;
+  }
 }
 .specialization__list {
   display: flex;
@@ -640,22 +640,21 @@ body {
 .team {
   background-color: #f5f4fa;
 }
-.team__list {
-  display: flex;
-  margin: calc(-1 * var(--card-set-gap));
-}
 .team__item {
   background-color: var(--card-bcg-color);
   text-align: center;
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-  flex-basis: calc((100% - 8 * var(--card-set-gap)) / 4);
-  margin: var(--card-set-gap);
+}
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .team__content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 .team__name {
   margin-bottom: 10px;
@@ -706,7 +705,7 @@ body {
 }
 
 .clients__item {
-  flex-basis: calc((100% - 12 * var(--card-set-gap)) / 6);
+  flex-basis: calc((100% - 4 * var(--card-set-gap)) / 2);
   margin: var(--card-set-gap);
 }
 
@@ -736,10 +735,6 @@ body {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.footer .container {
-  display: flex;
-  align-items: baseline;
 }
 
 .footer__address {
@@ -877,8 +872,8 @@ body {
 
 .backdrop {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
