@@ -462,9 +462,11 @@ body {
 
 .footer__logo {
   margin-bottom: 20px;
+  transition: color var(--time-duration) var(--time-function);
 }
 .footer__logo--accent {
   color: var(--text-color-light);
+  transition: color var(--time-duration) var(--time-function);
 }
 .footer__logo:hover, .footer__logo:focus {
   color: var(--text-color-light);

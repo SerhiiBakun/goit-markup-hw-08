@@ -13,6 +13,7 @@
 	margin-right: auto;
 	padding-top: 16px;
 	padding-bottom: 16px;
+	transition: color var(--time-duration) var(--time-function);
 
 	&--accent {
 		color: var(--title-text-color);
@@ -25,8 +26,6 @@
 	@include desktop {
 		margin-right: 93px;
 	}
-
-	transition: color var(--time-duration) var(--time-function);
 
 	&:hover,
 	&:focus {
@@ -41,9 +40,11 @@
 
 .footer__logo {
 	margin-bottom: 20px;
-	// width: 100%;
+	transition: color var(--time-duration) var(--time-function);
+
 	&--accent {
 		color: var(--text-color-light);
+		transition: color var(--time-duration) var(--time-function);
 	}
 	&:hover,
 	&:focus {
