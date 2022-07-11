@@ -647,8 +647,12 @@ body {
 .menu-nav__link:hover, .menu-nav__link:focus {
   color: var(--accent-color);
 }
+
 .menu-nav__link--current {
   color: var(--accent-color);
+}
+.mob-menu__close:hover ~ .menu-nav__link--current, .mob-menu__close:focus ~ .menu-nav__link--current {
+  color: var(--title-text-color);
 }
 
 .menu-contact {

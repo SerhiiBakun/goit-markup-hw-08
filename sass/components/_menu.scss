@@ -64,9 +64,13 @@
 	&:focus {
 		color: var(--accent-color);
 	}
+}
 
-	&--current {
-		color: var(--accent-color);
+.menu-nav__link--current {
+	color: var(--accent-color);
+	.mob-menu__close:hover ~ &,
+	.mob-menu__close:focus ~ & {
+		color: var(--title-text-color);
 	}
 }
 
