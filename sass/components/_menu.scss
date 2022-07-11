@@ -68,8 +68,8 @@
 
 .menu-nav__link--current {
 	color: var(--accent-color);
-	.mob-menu__close:hover ~ &,
-	.mob-menu__close:focus ~ & {
+	.mob-menu__close:hover ~ .menu-nav &,
+	.mob-menu__close:focus ~ .menu-nav & {
 		color: var(--title-text-color);
 	}
 }
