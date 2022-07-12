@@ -545,6 +545,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .contact__link {
+    font-size: 14px;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -761,6 +762,7 @@ body {
   min-width: 200px;
   min-height: 50px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 1.88;
   color: var(--text-color-light);
   background-color: var(--accent-color);
@@ -768,11 +770,6 @@ body {
 }
 .btn__hero:hover, .btn__hero:focus {
   background-color: var(--btn-hover-color);
-}
-@media screen and (min-width: 768px) {
-  .btn__hero {
-    font-size: 16px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1223,11 +1220,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    width: 450px;
+    min-width: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transform: translate(-50%, -50%) scale(0.8);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1461,13 +1457,19 @@ body {
 }
 
 .work__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
   padding: 20px 24px;
   border: 1px #eeeeee;
   border-style: none solid solid solid;
 }
 
 .work__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   transition: box-shadow var(--time-duration) var(--time-function);
 }
@@ -1526,7 +1528,6 @@ body {
 }
 
 .work__title {
-  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
