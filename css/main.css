@@ -1365,6 +1365,12 @@ body {
   padding-left: 23px;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .modal-check__title {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
 .modal-check__icon {
   position: absolute;
@@ -1457,10 +1463,7 @@ body {
 }
 
 .work__content {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
   padding: 20px 24px;
   border: 1px #eeeeee;
   border-style: none solid solid solid;
